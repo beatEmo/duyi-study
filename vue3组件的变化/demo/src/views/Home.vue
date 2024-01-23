@@ -3,8 +3,13 @@
     <div class="block">
       <h2>区域1</h2>
       <p>
-        <button>打开朦层</button>
+        <button @click="modalVisible = true">打开朦层</button>
       </p>
+      <Teleport to="body">
+        <Modal v-if="modalVisible">
+          <button @click="modalVisible = false">关闭朦层</button>
+        </Modal>
+      </Teleport>
     </div>
     <div class="block mid">
       <h2>区域2</h2>
@@ -17,14 +22,17 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import Modal from "../components/Modal.vue";
 import { getAsyncComponent } from "../util";
 
 const Block3 = getAsyncComponent("../components/Block3.vue");
 const Block5 = getAsyncComponent("../components/Block5.vue");
 export default {
-  components: { Block3, Block5 },
+  components: { Block3, Block5, Modal },
   setup() {
-    return {};
+    const modalVisible = ref(false);
+    return { modalVisible: modalVisible };
   }
 };
 </script>
