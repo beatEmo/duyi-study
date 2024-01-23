@@ -18,6 +18,16 @@ export function random(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+export function getAsyncPage(path) {
+  return defineAsyncComponent({
+    loader: async () => {
+      await delay();
+      return import(path);
+    },
+    loadingComponent: loading
+  });
+}
+
 export function getAsyncComponent(path) {
   return defineAsyncComponent({
     loader: async () => {
