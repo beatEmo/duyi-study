@@ -9,15 +9,20 @@
     <div class="block mid">
       <h2>区域2</h2>
     </div>
-    <div class="block big"><h2>区域3</h2></div>
+    <div class="block big"><Block3 /></div>
     <div class="block big"><h2>区域4</h2></div>
-    <div class="block mid"><h2>区域5</h2></div>
+    <div class="block mid"><Block5 /></div>
     <div class="block"><h2>区域6</h2></div>
   </div>
 </template>
 
 <script>
+import { getAsyncComponent } from "../util";
+
+const Block3 = getAsyncComponent("../components/Block3.vue");
+const Block5 = getAsyncComponent("../components/Block5.vue");
 export default {
+  components: { Block3, Block5 },
   setup() {
     return {};
   }
