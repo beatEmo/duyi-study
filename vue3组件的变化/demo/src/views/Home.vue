@@ -25,7 +25,6 @@
 import { ref } from "vue";
 import Modal from "../components/Modal.vue";
 import { getAsyncComponent } from "../util";
-
 const Block3 = getAsyncComponent("../components/Block3.vue");
 const Block5 = getAsyncComponent("../components/Block5.vue");
 export default {
