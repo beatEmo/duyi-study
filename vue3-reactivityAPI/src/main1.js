@@ -12,7 +12,7 @@ console.log("state ready");
 console.log("fullname is", fullName.value);
 console.log("fullname is", fullName.value);
 const imState = readonly(state);
-console.log(imState === state);
+console.log(imState === state); // false
 
 const stateRef = ref(state);
 console.log(stateRef.value === state);
@@ -25,4 +25,4 @@ console.log("fullname is", fullName.value);
 console.log("fullname is", fullName.value);
 
 const imState2 = readonly(stateRef);
-console.log(imState2.value === stateRef.value);
+console.log(imState2.value === stateRef.value); // false
