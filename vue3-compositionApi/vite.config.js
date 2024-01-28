@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://127.0.0.1:14196/vue3-compositionApi",
+        target: "http://127.0.0.1:3223/vue3-compositionApi",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, "")
       }

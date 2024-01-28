@@ -1,37 +1,63 @@
 <template>
-  {{ gdp }}
+  <h1>2019 GDP Top 5</h1>
+  <div class="container">
+    <Bar1 :gdp="gdp" />
+    <Bar2 :gdp="gdp" />
+  </div>
+  <div class="controls">
+    <div class="item">
+      <label>美国</label>
+      <input type="number" step="0.001" min="0" />
+    </div>
+    <div class="item">
+      <label>中国</label>
+      <input type="number" step="0.001" min="0" />
+    </div>
+  </div>
 </template>
 
-<script setup>
-// @ts-ignore
+<script>
 import { ref } from "vue";
-
-const gdp = ref([]);
-
-async function getGdp() {
-  gdp.value = await fetch("/api/gdp.json").then((res) => res.json());
-}
-getGdp();
+import Bar1 from "./components/Bar1.vue";
+import Bar2 from "./components/Bar2.vue";
+export default {
+  components: { Bar1, Bar2 },
+  setup() {
+    const gdp = ref([]);
+    async function getGdp() {
+      gdp.value = await fetch("/api/gdp.json").then((res) => res.json());
+    }
+    getGdp();
+    return {
+      gdp
+    };
+  }
+};
 </script>
 
 <style>
-body {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.controls {
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.item {
+  margin: 1em;
+}
+.item label {
+  margin: 0 1em;
+}
+.item input {
+  height: 26px;
+  font-size: 14px;
+}
+h1 {
   text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>
