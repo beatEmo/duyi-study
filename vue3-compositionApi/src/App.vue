@@ -1,6 +1,18 @@
-<template></template>
+<template>
+  {{ gdp }}
+</template>
 
-<script setup></script>
+<script setup>
+// @ts-ignore
+import { ref } from "vue";
+
+const gdp = ref([]);
+
+async function getGdp() {
+  gdp.value = await fetch("/api/gdp.json").then((res) => res.json());
+}
+getGdp();
+</script>
 
 <style>
 body {
