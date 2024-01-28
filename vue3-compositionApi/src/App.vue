@@ -5,13 +5,9 @@
     <Bar2 :gdp="gdp" />
   </div>
   <div class="controls">
-    <div class="item">
-      <label>美国</label>
-      <input type="number" step="0.001" min="0" />
-    </div>
-    <div class="item">
-      <label>中国</label>
-      <input type="number" step="0.001" min="0" />
+    <div class="item" v-for="item in gdp">
+      <label>{{ item.country }}</label>
+      <input type="number" step="0.001" min="0" v-model="item.value" />
     </div>
   </div>
 </template>

@@ -14,10 +14,14 @@
 </template>
 
 <script>
+import useGdp from "../composition/useGdp";
 export default {
   name: "Bar1",
-  setup() {
-    return {};
+  setup(props) {
+    return {
+      // @ts-ignore
+      ...useGdp(props.gdp, 400)
+    };
   }
 };
 </script>
