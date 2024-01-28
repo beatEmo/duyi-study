@@ -26,19 +26,19 @@ packages:
     version: 7.22.20
     engines: {node: '>=6.9.0'}
 
-  registry.npmmirror.com/@babel/parser/7.23.9:
-    resolution: {integrity: sha512-9tcKgqKbs3xGJ+NtKF2ndOBBLVwPjl1SHxPQkd36r3Dlirw3xWUeGaTbqr7uGZcTaxkVNwc+03SVP7aCdWrTlA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/parser/-/parser-7.23.9.tgz}
+  registry.npmmirror.com/@babel/parser/7.23.6:
+    resolution: {integrity: sha512-Z2uID7YJ7oNvAI20O9X0bblw7Qqs8Q2hFy0R9tAfnfLkp5MW0UH9eUvnDSnFwKZ0AvgS1ucqR4KzvVHgnke1VQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/parser/-/parser-7.23.6.tgz}
     name: '@babel/parser'
-    version: 7.23.9
+    version: 7.23.6
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
-      '@babel/types': registry.npmmirror.com/@babel/types/7.23.9
+      '@babel/types': registry.npmmirror.com/@babel/types/7.23.6
 
-  registry.npmmirror.com/@babel/types/7.23.9:
-    resolution: {integrity: sha512-dQjSq/7HaSjRM43FFGnv5keM2HsxpmyV1PfaSVm0nzzjwwTmjOe6J4bC8e3+pTEIgHaHj+1ZlLThRJ2auc/w1Q==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/types/-/types-7.23.9.tgz}
+  registry.npmmirror.com/@babel/types/7.23.6:
+    resolution: {integrity: sha512-+uarb83brBzPKN38NX1MkB6vb6+mwvR6amUulqAE7ccQw1pEl+bCia9TbdG1lsnFP7lZySvUn37CHyXQdfTwzg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/types/-/types-7.23.6.tgz}
     name: '@babel/types'
-    version: 7.23.9
+    version: 7.23.6
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-string-parser': registry.npmmirror.com/@babel/helper-string-parser/7.23.4
@@ -463,7 +463,7 @@ packages:
     name: '@vue/compiler-core'
     version: 3.4.15
     dependencies:
-      '@babel/parser': registry.npmmirror.com/@babel/parser/7.23.9
+      '@babel/parser': registry.npmmirror.com/@babel/parser/7.23.6
       '@vue/shared': registry.npmmirror.com/@vue/shared/3.4.15
       entities: registry.npmmirror.com/entities/4.5.0
       estree-walker: registry.npmmirror.com/estree-walker/2.0.2
@@ -482,7 +482,7 @@ packages:
     name: '@vue/compiler-sfc'
     version: 3.4.15
     dependencies:
-      '@babel/parser': registry.npmmirror.com/@babel/parser/7.23.9
+      '@babel/parser': registry.npmmirror.com/@babel/parser/7.23.6
       '@vue/compiler-core': registry.npmmirror.com/@vue/compiler-core/3.4.15
       '@vue/compiler-dom': registry.npmmirror.com/@vue/compiler-dom/3.4.15
       '@vue/compiler-ssr': registry.npmmirror.com/@vue/compiler-ssr/3.4.15
